@@ -13,15 +13,13 @@ This repository estimates **Computationally Synthesized Suitability (CSS)** scor
 - construct Spearman correlation networks; and
 - evaluate longitudinal changes in CSS.
 
-The original analysis scripts used the abbreviation `CST`. The published article uses `CSS`; this repository uses `CSS` consistently. Legacy input columns named `CST.Time3`, `CST.Time6`, `CST.Time10`, or `CST.Time12` are accepted and renamed automatically.
-
 ## Repository structure
 
 ```text
 .
 ├── R/
 │   ├── config.R                 # variables, formulas, cutoffs, and plotting settings
-│   ├── data_validation.R        # input checks and CST-to-CSS compatibility
+│   ├── data_validation.R        # input and outcome validation
 │   ├── css_models.R             # age-specific linear models and CSS calculation
 │   ├── evaluation.R             # correlations and classification metrics
 │   ├── networks.R               # Spearman/FDR correlation networks
