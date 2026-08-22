@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying article when using this code."
+title: "Behavioral components define operational suitability metric for detection dog success: R code"
+type: software
+authors:
+  - family-names: Zheng
+    given-names: Jingyi
+  - family-names: Wang
+    given-names: Xu
+version: 1.0.0
+repository-code: "https://github.com/Ginny-Zheng/Linking-trainer-reported-assessments-of-detection-dog-suitability-with-standardized-behavioral-tests"
+preferred-citation:
+  type: article
+  title: "Behavioral components define operational suitability metric for detection dog success"
+  authors:
+    - family-names: Zheng
+      given-names: Jingyi
+    - family-names: Lazarowski
+      given-names: Lucia
+    - family-names: Lanier
+      given-names: Abbigail L.
+    - family-names: Haney
+      given-names: Pamela S.
+    - family-names: Chester
+      given-names: Emily M.
+    - family-names: Waggoner
+      given-names: Paul
+    - family-names: Wang
+      given-names: Xu
+  journal: "Frontiers in Veterinary Science"
+  volume: "13"
+  year: 2026
+  doi: "10.3389/fvets.2026.1887925"
