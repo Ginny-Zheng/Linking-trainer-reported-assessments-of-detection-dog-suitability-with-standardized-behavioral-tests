@@ -1,0 +1,8 @@
+source(file.path("R", "config.R")); source(file.path("R", "data_validation.R")); source(file.path("R", "css_models.R"))
+dir.create("outputs", showWarnings = FALSE)
+data <- read_analysis_data(); data <- prepare_outcome(data)
+fit <- estimate_css(data)
+writexl::write_xlsx(fit$data, file.path("outputs", "data_with_css.xlsx"))
+saveRDS(fit$models, file.path("outputs", "css_models.rds"))
+utils::write.csv(model_coefficients(fit$models), file.path("outputs", "css_model_coefficients.csv"), row.names = FALSE)
+utils::write.csv(css_agreement(fit$data), file.path("outputs", "css_agreement.csv"), row.names = FALSE)
