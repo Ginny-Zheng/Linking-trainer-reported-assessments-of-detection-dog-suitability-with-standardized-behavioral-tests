@@ -1,0 +1,22 @@
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# Confidential data
+data/private/
+*.xlsx
+*.xls
+*.csv
+*.rds
+
+# Generated results
+outputs/*
+!outputs/.gitkeep
+
+# Manuscripts and OS files
+*.docx
+*.pdf
+.DS_Store
+Thumbs.db
