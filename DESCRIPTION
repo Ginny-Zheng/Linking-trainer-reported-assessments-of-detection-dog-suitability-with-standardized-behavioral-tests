@@ -1,0 +1,27 @@
+Package: CSSPaperReproducibility
+Type: Project
+Title: Reproducible Analysis of Computationally Synthesized Suitability
+Version: 1.0.0
+Authors@R: c(
+    person("Jingyi", "Zheng", role = c("aut", "cre")),
+    person("Xu", "Wang", role = "aut")
+  )
+Description: R code accompanying the study of trainer-reported detection dog
+    suitability, standardized behavioral components, computationally synthesized
+    suitability, and training outcomes.
+License: License to be selected by copyright holder
+Encoding: UTF-8
+Depends: R (>= 4.3.0)
+Imports:
+    caret,
+    dplyr,
+    ggplot2,
+    igraph,
+    pROC,
+    psych,
+    readxl,
+    tidyr,
+    writexl
+Suggests:
+    renv,
+    testthat
