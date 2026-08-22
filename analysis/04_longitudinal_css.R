@@ -1,0 +1,7 @@
+source(file.path("R", "config.R")); source(file.path("R", "data_validation.R")); source(file.path("R", "longitudinal.R"))
+data <- readxl::read_excel(file.path("outputs", "data_with_css.xlsx")) |> as.data.frame(check.names = FALSE) |> prepare_outcome()
+long <- css_long_format(data); slopes <- dog_css_slopes(long)
+utils::write.csv(long, file.path("outputs", "css_longitudinal.csv"), row.names = FALSE)
+utils::write.csv(slopes, file.path("outputs", "css_slopes_by_dog.csv"), row.names = FALSE)
+capture.output(stats::wilcox.test(slope ~ final_disposition, data = slopes), file = file.path("outputs", "css_slope_wilcoxon.txt"))
+ggplot2::ggsave(file.path("outputs", "figures", "css_longitudinal_by_outcome.png"), plot_longitudinal_css(long), width = 7, height = 5, dpi = 300)
