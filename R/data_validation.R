@@ -5,17 +5,7 @@ read_analysis_data <- function(config = css_config) {
   }
   data <- readxl::read_excel(config$data_path, sheet = config$sheet) |>
     as.data.frame(check.names = FALSE)
-  data <- standardize_legacy_css_names(data, config)
   validate_analysis_data(data, config)
-  data
-}
-
-standardize_legacy_css_names <- function(data, config = css_config) {
-  for (age in config$ages) {
-    legacy <- paste0("CST.Time", age)
-    current <- css_column(age)
-    if (legacy %in% names(data) && !current %in% names(data)) names(data)[names(data) == legacy] <- current
-  }
   data
 }
 
